@@ -52,6 +52,13 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
+    const token = req.header('x-auth-token');
+    const decoded = jwt.verify(token, config.get('jwtSecret'));
+    const validToken = await User.findById(decoded.user.id);
+
+    if (!validToken)
+      return res.status(400).json('Invalid Token, Authorization Denied');
+
     const {
       company,
       website,
@@ -158,7 +165,7 @@ router.delete('/', auth, async (req, res) => {
     // Remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
     // Remove user
-    await Profile.findOneAndRemove({ _id: req.user.id });
+    await User.findOneAndRemove({ _id: req.user.id });
     res.json({ msg: 'User removed' });
   } catch (err) {
     console.error(err.message);
