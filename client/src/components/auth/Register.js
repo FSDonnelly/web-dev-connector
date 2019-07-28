@@ -42,7 +42,7 @@ const Register = ({ setAlert, register }) => {
             name='name'
             onChange={e => onChange(e)}
             value={name}
-            required
+            // required
           />
         </div>
         <div className='form-group'>
@@ -52,7 +52,7 @@ const Register = ({ setAlert, register }) => {
             name='email'
             onChange={e => onChange(e)}
             value={email}
-            required
+            // required
           />
           <small className='form-text'>
             This site uses Gravatar so if you want a profile image, use a
@@ -67,7 +67,7 @@ const Register = ({ setAlert, register }) => {
             onChange={e => onChange(e)}
             minLength='8'
             value={password}
-            required
+            // required
           />
         </div>
         <div className='form-group'>
