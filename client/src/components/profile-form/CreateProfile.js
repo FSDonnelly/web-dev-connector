@@ -215,4 +215,4 @@ const CreateProfile = props => {
 
 CreateProfile.propTypes = {};
 
-export default CreateProfile;
+export default connect(null)(CreateProfile);
