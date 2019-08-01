@@ -21,7 +21,6 @@ const Experience = ({ experience }) => {
       </td>
     </tr>
   ));
-  console.log(experience);
   return (
     <Fragment>
       <h2 className='my-2'>Experience Credentials</h2>
@@ -44,4 +43,4 @@ Experience.propTypes = {
   experience: PropTypes.array.isRequired
 };
 
-export default Experience;
+export default connect(null)(Experience);

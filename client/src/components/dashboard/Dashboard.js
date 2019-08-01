@@ -6,6 +6,7 @@ import Spinner from '../layout/Spinner';
 import { getCurrentProfile } from '../../actions/profile';
 import DashboardActions from './DashboardActions';
 import Experience from './Experience';
+import Education from './Education';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -28,6 +29,7 @@ const Dashboard = ({
         <Fragment>
           <DashboardActions />
           <Experience experience={profile.experience} />
+          <Education education={profile.education} />
         </Fragment>
       ) : (
         <Fragment>
