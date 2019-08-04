@@ -4,16 +4,16 @@ import { connect } from 'react-redux';
 import { getGithubRepos } from '../../actions/profile';
 import Spinner from '../layout/Spinner';
 
-const ProfileGithub = ({ username, getGitHubRepos, repos }) => {
+const ProfileGithub = ({ username, getGithubRepos, repos }) => {
   useEffect(() => {
     getGithubRepos(username);
-  }, [getGitHubRepos, username]);
+  }, [getGithubRepos, username]);
   console.log(username);
   return <div />;
 };
 
 ProfileGithub.propTypes = {
-  getGitHubRepos: PropTypes.func.isRequired,
+  getGithubRepos: PropTypes.func.isRequired,
   repos: PropTypes.array.isRequired,
   username: PropTypes.string.isRequired
 };
