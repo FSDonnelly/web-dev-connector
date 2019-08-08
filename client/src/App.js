@@ -67,8 +67,8 @@ const App = () => {
                 path='/add-education'
                 component={AddEducation}
               />
-              <PrivateRoute exact path='/posts' component={Posts} />
               <PrivateRoute exact path='/post/:postId' component={Post} />
+              <PrivateRoute exact path='/posts' component={Posts} />
             </Switch>
           </section>
         </Fragment>
