@@ -150,10 +150,13 @@ img {
 
 .alert {
   padding: 0.8rem;
-  margin: 1rem 0;
+  margin: center;
+  width: 70%;
   opacity: 0.9;
   background: var(--light-color);
   color: #333;
+  position: fixed;
+  text-align: center;
 }
 
 .btn-primary,
