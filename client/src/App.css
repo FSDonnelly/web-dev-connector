@@ -150,8 +150,7 @@ img {
 
 .alert {
   padding: 0.8rem;
-  margin: center;
-  width: 70%;
+  margin: auto;
   opacity: 0.9;
   background: var(--light-color);
   color: #333;

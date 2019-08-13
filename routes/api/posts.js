@@ -1,13 +1,9 @@
 const express = require('express');
-const request = require('request');
 const router = express.Router();
 const auth = require('../../middleware/auth');
-const jwt = require('jsonwebtoken');
-const config = require('config');
 const { check, validationResult } = require('express-validator');
 
 const Post = require('../../models/Post');
-const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 
 // @route   POST api/posts
